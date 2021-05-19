@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'perfil',
     pathMatch: 'full'
   },
   {
@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'upload',
     loadChildren: () => import('./upload/upload.module').then( m => m.UploadPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'listar-perfil',
+    loadChildren: () => import('./listar-perfil/listar-perfil.module').then( m => m.ListarPerfilPageModule)
   },
 ];
 
